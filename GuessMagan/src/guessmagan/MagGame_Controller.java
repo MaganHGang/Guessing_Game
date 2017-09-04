@@ -100,8 +100,8 @@ public class MagGame_Controller implements Initializable
                                                 else if (choiceButton2.isSelected())
                                                 {
 
-                                                    GuessNum = r.nextInt(30)+1;
-                                                    HighNum = 30;// Highest number to guess.
+                                                    GuessNum = r.nextInt(50)+1;
+                                                    HighNum = 50;// Highest number to guess.
                                                     
                                                     
                                                     // provent the radio buttons from being touched by accident
