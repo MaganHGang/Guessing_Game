@@ -82,7 +82,7 @@ public class MagGame_Controller implements Initializable
 
                                                      GuessNum = r.nextInt(10)+1;
                                                      HighNum = 10; // Highest number to guess.
-                                                    //System.out.println(GuessNum);
+                                                    
                                                     
                                                     // provent the radio buttons from being touched by accident
                                                     gameButton.setDisable(true);
@@ -102,7 +102,7 @@ public class MagGame_Controller implements Initializable
 
                                                     GuessNum = r.nextInt(30)+1;
                                                     HighNum = 30;// Highest number to guess.
-                                                    //System.out.println(GuessNum);
+                                                    
                                                     
                                                     // provent the radio buttons from being touched by accident
                                                     gameButton.setDisable(true); 
@@ -122,7 +122,7 @@ public class MagGame_Controller implements Initializable
 
                                                     GuessNum = r.nextInt(100)+1;
                                                     HighNum = 100; // Highest number to guess.
-                                                    //System.out.println(GuessNum);
+                                                   
                                                     
                                                     // provent the radio buttons from being touched by accident
                                                     gameButton.setDisable(true);
