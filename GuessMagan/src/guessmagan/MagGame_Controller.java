@@ -16,9 +16,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import java.util.Random;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 public class MagGame_Controller implements Initializable
 {
     // instance variables for the game's GUI
@@ -137,7 +139,13 @@ public class MagGame_Controller implements Initializable
                                                 }
                                                 else
                                                 {
-                                                    JOptionPane.showMessageDialog(null,"Press something!!");
+                                                    //JOptionPane.showMessageDialog(null,"Press something!!");
+                                                    Alert al = new Alert(AlertType.WARNING); 
+                                                    al.setTitle("Warning Dialog");
+                                                    al.setHeaderText("your choices");
+                                                    al.setContentText("Make sure you pick one of the options to play the game");
+
+                                                    al.showAndWait();
                                                 }
                                                 
                                                 
@@ -161,7 +169,13 @@ public class MagGame_Controller implements Initializable
                                                 
                                                 if (numval == GuessNum)
                                                 {
-                                                    JOptionPane.showMessageDialog(null, "Congrats!! You won in " + NumGuess + " guess(es)!!");
+                                                    //JOptionPane.showMessageDialog(null, "Congrats!! You won in " + NumGuess + " guess(es)!!");
+                                                    Alert infoD = new Alert(AlertType.INFORMATION);
+                                                    infoD.setTitle("Information Dialog");
+                                                    infoD.setHeaderText(null);
+                                                    infoD.setContentText("Congrats!! You won in " + NumGuess + " guess(es)!!");
+
+                                                    infoD.showAndWait();
                                                     // Disable these GUI elements since the game is finished by that time
                                                     NumGuess = 0;
                                                     NumGuessVal.setText(Integer.toString(NumGuess)); 
@@ -207,7 +221,12 @@ public class MagGame_Controller implements Initializable
                                                         UserGuessN.setText("Number too low");
                                                         if (numval < 1) 
                                                         {
-                                                            JOptionPane.showMessageDialog(null, "you can't type numbers less than 1!!");
+                                                            Alert al = new Alert(AlertType.WARNING); 
+                                                            al.setTitle("Warning Dialog");
+                                                            al.setHeaderText(null);
+                                                            al.setContentText("you can't type numbers less than 1");
+
+                                                            al.showAndWait();
                                                         }
                                                         UserGuess.setFocusTraversable(true); // type the guess again.
                                                     }    
@@ -216,7 +235,12 @@ public class MagGame_Controller implements Initializable
 
                                             catch (NumberFormatException e )
                                             {
-                                                  JOptionPane.showMessageDialog(null,"Enter a number!!");
+                                                  Alert al = new Alert(AlertType.WARNING); 
+                                                  al.setTitle("Warning Dialog");
+                                                  al.setHeaderText("Number error");
+                                                  al.setContentText("Make sure you tye numbers");
+
+                                                  al.showAndWait();
                                                   UserGuess.setFocusTraversable(true); // type the guess again.
                                                   
                                             }
@@ -226,7 +250,13 @@ public class MagGame_Controller implements Initializable
                                         
                                         else 
                                         {
-                                            JOptionPane.showMessageDialog(null,"Make sure you type in your guess!!");
+                                            //JOptionPane.showMessageDialog(null,"Make sure you type in your guess!!");
+                                            Alert al = new Alert(AlertType.WARNING); 
+                                            al.setTitle("Warning Dialog");
+                                            al.setHeaderText (null);
+                                            al.setContentText("Make sure you type in your guess");
+
+                                            al.showAndWait();
                                         }
        
                                      });
